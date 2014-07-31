@@ -7,6 +7,9 @@
 <title>Adiciona Contato</title>
 </head>
 <body>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<c:import url="cabecalho.jsp"></c:import>
 	<form action="adicionaContato" method="post">
 		<label>
 		Nome:
@@ -24,8 +27,11 @@
 		Data Nascimento:
 			<input type="text" name = "dateBirth" /><br />
 		</label>
+		<hr />
 		<input type="submit" value="Gravar" />
 		
 	</form>
+	<c:import url="lista.jsp"></c:import>
+	<c:import url="rodape.jsp"></c:import>
 </body>
 </html>
