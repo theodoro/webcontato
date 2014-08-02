@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 	<jsp:useBean id="dao" class="br.com.webcontato.dao.ContactDAO"></jsp:useBean>
 	
 	<table border="1">
@@ -19,7 +20,11 @@
 		
 				<td>${contato.address}</td>
 			
-				<td>${contato.dateBirth.time}</td>
+				<td>
+				<fmt:formatDate value="${contato.dateBirth.time}" pattern="dd/MM/yyyy"/>
+				
+				
+				</td>
 			</tr>
 		</c:forEach>
 	</table>
